@@ -1,4 +1,3 @@
-import "./App.css"
 import {Table} from "./Table.jsx"
 import {List} from "./List.jsx"
 import { NinthGrade, TenthGrade, EleventhGrade } from "./Grades.jsx"

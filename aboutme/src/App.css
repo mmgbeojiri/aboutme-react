@@ -1,14 +1,18 @@
+@import "tailwindcss";
+
 * {
     
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition-duration: 0.1s;
+    @apply duration-100;
 }
 .mySlides1, .mySlides2, .mySlides3 {display: none}
 
 body {
-    box-sizing: border-box;
-    margin:0;
+    @apply box-border m-0;
     
+}
+@theme {
+  --spacing: 1rem; /* Redefines the base unit */
 }
 :root{
 --slate-50: #F8FAFC;
@@ -39,73 +43,89 @@ body {
 
 
 div {
-    border: 0.1rem solid var(--slate-200); 
+    /*border: 0.1rem solid var(--slate-200); 
     margin: 1rem;
     border-radius: 1rem;
-    padding:1rem;
+    padding:1rem;*/
+
+    @apply border border-slate-200 rounded-lg m-1 p-1;
 }
 
 #root {
-  border: none;
-  margin: 0;
-  padding: 0;
+    @apply p-0 m-0 border-none;
 }
 
 .subdiv {
-    padding:0;
-    margin: 0;
-    border:none;
+
+    @apply p-0 m-0 border-none;
 }
 h1 {
-    margin: 0;
+    /*margin: 0;
     color: var(--slate-700);
     font-size: 1.5rem;
-    line-height:1.75rem;
+    line-height:1.75rem;*/
+
+    @apply font-bold text-2xl  text-slate-700 m-0;
 }
 h2 {
-    font-size: 1.125rem;
-    color:var(--slate-600);
+    /*font-size: 1.125rem;
+    color:var(--slate-600);*/
+    @apply text-lg text-slate-600;
 }
 p {
-    color:var(--slate-600);
-    font-size:0.875rem;
+    /*color:var(--slate-600);
+    font-size:0.875rem;*/
     line-height: 1rem;
+    
+    @apply text-base text-slate-600;
 }
 
 #list {
+  /*
     background: var(--slate-50);
     padding: 1rem 2rem 1rem 2rem;
     border: 0.125rem solid var(--slate-100);
     border-radius:1rem;
     list-style-type: disc;
     color:var(--slate-600);
-    font-size:0.875rem;
+    font-size:0.875rem;*/
+
+
+    @apply bg-slate-50 py-1 px-2 border border-slate-100 rounded-lg list-disc text-slate-600 text-sm;
 }
 
 header {
     
-    padding:1rem;
+    @apply p-1
     
 }
 header p {
-    margin: 1rem 0 0 1;
+    /*margin: 1rem 0 0 1;*/
+    @apply mt-1
 }
  header h1{
+  /*
     background-color: var(--pri-50);
     padding:1rem;
     border: 0.5rem solid var(--pri-100);
     border-radius: 1rem;
     color:var(--pri-900);
-    font-size:1.5rem;
+    font-size:1.5rem;*/
+
+    @apply bg-violet-50 p-1 border-2 border-violet-100 rounded-lg text-violet-900 text-2xl hover:shadow-lg
  }
 
 hr {
+  /*
     border:none;
     border-top: 1px solid var(--slate-100);
-    margin: 0rem 0 0rem 0;
+    margin: 0rem 0 0rem 0;*/
+
+    @apply border-t border-slate-200 m-0;
 }
 
 table {
+  /*
     width: 100%;
     border-collapse: collapse;
     background-color: white;
@@ -113,40 +133,49 @@ table {
     font-size:0.875rem;
     color:var(--slate-500);
     border: 1px solid var(--slate-100);
-    border-radius: 1rem;
+    border-radius: 1rem;*/
+
+
+    @apply w-full border-collapse bg-white text-left text-sm text-slate-500 border border-slate-100 rounded-lg;
 }
 
 th, td {
-    padding: 1rem 2rem 1rem 2rem;
+    @apply py-1 px-2;
 }
 
 td:hover, th:hover{
-    background-color: white;
-    color:var(--pri-400);
+
+    @apply bg-white text-violet-400;
 }
 
 tr{
-    border: 1px solid var(--slate-200);
+
+    @apply border border-slate-200;
 }
 th {
-    background-color: var(--slate-50); 
+    @apply bg-slate-50;
 }
 td{
-    font-size: 0.875rem;;
-    color: var(--slate-400)
+    /*font-size: 0.875rem;
+    color: var(--slate-400)*/
+
+    @apply text-sm text-slate-400;
 }
 
 #section {
-    display: flex;
+    /*display: flex;
     flex-direction: row;
     border: none;
     margin: 0 !important;
     padding: 0 !important;
-    gap:4px;
+    gap:4px;*/
+
+    @apply flex flex-row border-none m-0 p-0 gap-4;
 
 }
 
 #sidebar {
+  /*
     border: none;
     margin:0;
     display: flex;
@@ -155,28 +184,34 @@ td{
     padding:1rem;
     flex-basis:1;
     min-width:6rem;
-    border-radius: 0;
+    border-radius: 0;*/
+
+    @apply m-0 flex flex-col border-y-0 border-l-0 !border-r border-slate-200 p-1 flex-1 max-w-[10rem] rounded-none;
 
     
 }
 
 #stickyLinks {
-    margin: 0;
+    /*margin: 0;
     border:none;
     padding:0;
     position:sticky;
-    top:1rem;
+    top:1rem;*/
+
+    @apply m-0 border-none p-0 sticky top-1;
 }
 
 main {
-    display:flex;
+    /*display:flex;
     flex-direction: column;
     flex-basis:1;
     justify-self: center;
-    margin:auto;
+    margin:auto;*/
+    @apply flex flex-col flex-[3] justify-self-center mx-auto max-w-[70vw]
 }
 
 #sidebar a {
+  /*
     display:flex;
     padding: 0.25rem 0.5rem 0.25rem 0.5rem;
     color: var(--slate-700);
@@ -184,25 +219,26 @@ main {
     font-size:0.875rem;
     border-radius:0.25rem;
     
-    text-align:left;
+    text-align:left;*/
+
+    @apply flex py-[0.25rem] px-[0.5rem] text-slate-700 no-underline text-base rounded text-left hover:bg-violet-100 hover:text-violet-300;
 }
 
-#sidebar a:hover {
-    background-color:var(--pri-100);
-    color:var(--pri-300)
-}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width:1000px;
+  /*max-width:1000px;
   position: relative;
-  margin: auto;
+  margin: auto;*/
+
+  @apply max-w-[1000px] relative m-auto;
 
 }
 .slideshow-container div {
-    margin:0;
+    /*margin:0;
     border:none;
-    padding:0;
+    padding:0;*/
+    @apply m-0 border-none p-0;
 }
 
 /* Hide the images by default */
@@ -210,7 +246,7 @@ main {
 
 /* Next & previous buttons */
 .prev, .next {
-  cursor: pointer;
+  /*cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
@@ -221,7 +257,9 @@ main {
   font-size: 18px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
-  user-select: none;
+  user-select: none;*/
+
+  @apply cursor-pointer absolute top-[50%] w-auto mt-[-22px] p-[4px] text-white font-bold text-lg transition duration-600 rounded-r select-none;
 }
 
 /* Position the "next button" to the right */
