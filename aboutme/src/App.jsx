@@ -11,11 +11,11 @@ import { useEffect } from "react";
 
 function App() {
   const [count, setCount] = useState(0)
-  useEffect(() => {
-  showSlides(1, 0);
-  showSlides(1, 1);
-  showSlides(1, 2);
-}, []);
+    useEffect(() => {
+    //showSlides(1, 0);
+    //showSlides(1, 1);
+    //showSlides(1, 2);
+  }, []);
   return (
     <>
     <Header />
