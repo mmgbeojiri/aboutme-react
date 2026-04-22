@@ -33,7 +33,6 @@ export function currentSlide(n, no) {
 }
 export function showSlides(n, no) {
   let i;
-  
   let x = document.getElementsByClassName(slideId[no]);
 
   if (x.length === 0) {
@@ -43,13 +42,17 @@ export function showSlides(n, no) {
   if (n > x.length) {slideIndex[no] = 1}    
   if (n < 1) {slideIndex[no] = x.length}
   for (i = 0; i < x.length; i++) {
-     x[i].classList.add("hidden");  
+     x[i].style.display = "none";  
   }
-  x[slideIndex[no]-1].classList.remove("hidden");  
+  x[slideIndex[no]-1].style.display = "block";  
 }
 
 export function SlideshowContainer1() {
-    return (
+  useEffect(() => {
+    showSlides(1, 0);
+  }, []);
+
+  return (
     <><div className="slideshow-container">
     
           <div className="mySlides1 fade">
@@ -87,24 +90,28 @@ export function SlideshowContainer1() {
             <div className="text">Flappy Bird Game Over</div>
           </div>
     
-          <a className="prev" onClick={plusSlides(-1,0)}>&#10094;</a>
-          <a className="next" onClick={plusSlides(1,0)}>&#10095;</a>
+          <a className="prev" onClick={() => plusSlides(-1,0)}>&#10094;</a>
+          <a className="next" onClick={() => plusSlides(1,0)}>&#10095;</a>
         </div>
         <br/>
         <div className="dots">
-          <span className="dot" onClick={currentSlide(1, 0)}></span>
-          <span className="dot" onClick={currentSlide(2, 0)}></span>
-          <span className="dot" onClick={currentSlide(3, 0)}></span>
-          <span className="dot" onClick={currentSlide(4, 0)}></span>
-          <span className="dot" onClick={currentSlide(5, 0)}></span>
-          <span className="dot" onClick={currentSlide(6, 0)}></span>
+          <span className="dot" onClick={() => currentSlide(1, 0)}></span>
+          <span className="dot" onClick={() => currentSlide(2, 0)}></span>
+          <span className="dot" onClick={() => currentSlide(3, 0)}></span>
+          <span className="dot" onClick={() => currentSlide(4, 0)}></span>
+          <span className="dot" onClick={() => currentSlide(5, 0)}></span>
+          <span className="dot" onClick={() => currentSlide(6, 0)}></span>
         </div>
         </>
         )
 }
 
 export function SlideshowContainer2() {
-    return (
+  useEffect(() => {
+    showSlides(1, 1);
+  }, []);
+
+  return (
     <><div className="slideshow-container">
     
           <div className="mySlides2 fade">
@@ -148,28 +155,29 @@ export function SlideshowContainer2() {
           <div className="text">Visit Japan</div>
         </div>
     
-        <a className="prev" onClick={plusSlides(-1, 1)}>&#10094;</a>
-        <a className="next" onClick={plusSlides(1, 1)}>&#10095;</a>
+        <a className="prev" onClick={() => plusSlides(-1, 1)}>&#10094;</a>
+        <a className="next" onClick={() => plusSlides(1, 1)}>&#10095;</a>
          </div>
       <br/>
     
       <div className="dots">
-        <span className="dot" onClick={currentSlide(1, 1)}></span>
-        <span className="dot" onClick={currentSlide(2, 1)}></span>
-        <span className="dot" onClick={currentSlide(3, 1)}></span>
-        <span className="dot" onClick={currentSlide(4, 1)}></span>
-        <span className="dot" onClick={currentSlide(5, 1)}></span>
-        <span className="dot" onClick={currentSlide(6, 1)}></span>
-        <span className="dot" onClick={currentSlide(7, 1)}></span>
+        <span className="dot" onClick={() => currentSlide(1, 1)}></span>
+        <span className="dot" onClick={() => currentSlide(2, 1)}></span>
+        <span className="dot" onClick={() => currentSlide(3, 1)}></span>
+        <span className="dot" onClick={() => currentSlide(4, 1)}></span>
+        <span className="dot" onClick={() => currentSlide(5, 1)}></span>
+        <span className="dot" onClick={() => currentSlide(6, 1)}></span>
+        <span className="dot" onClick={() => currentSlide(7, 1)}></span>
       </div>
       </>)
 }
 
 export function SlideshowContainer3() {
-    
+  useEffect(() => {
+    showSlides(1, 2);
+  }, []);
 
-    
-    return(<>
+  return(<>
     <div className="slideshow-container">
             
               <div className="mySlides3 fade">
@@ -220,21 +228,21 @@ export function SlideshowContainer3() {
             
             
             
-              <a className="prev" onClick={plusSlides(-1, 2)}>&#10094;</a>
-              <a className="next" onClick={plusSlides(1, 2)}>&#10095;</a>
+              <a className="prev" onClick={() => plusSlides(-1, 2)}>&#10094;</a>
+              <a className="next" onClick={() => plusSlides(1, 2)}>&#10095;</a>
             </div>
       <br/>
     
       <div className="dots">
-        <span className="dot" onClick={currentSlide(1, 2)}></span>
-        <span className="dot" onClick={currentSlide(2, 2)}></span>
-        <span className="dot" onClick={currentSlide(3, 2)}></span>
-        <span className="dot" onClick={currentSlide(4, 2)}></span>
-        <span className="dot" onClick={currentSlide(5, 2)}></span>
-        <span className="dot" onClick={currentSlide(6, 2)}></span>
-        <span className="dot" onClick={currentSlide(7, 2)}></span>
-        <span className="dot" onClick={currentSlide(8, 2)}></span>
-        <span className="dot" onClick={currentSlide(9, 2)}></span>
+        <span className="dot" onClick={() => currentSlide(1, 2)}></span>
+        <span className="dot" onClick={() => currentSlide(2, 2)}></span>
+        <span className="dot" onClick={() => currentSlide(3, 2)}></span>
+        <span className="dot" onClick={() => currentSlide(4, 2)}></span>
+        <span className="dot" onClick={() => currentSlide(5, 2)}></span>
+        <span className="dot" onClick={() => currentSlide(6, 2)}></span>
+        <span className="dot" onClick={() => currentSlide(7, 2)}></span>
+        <span className="dot" onClick={() => currentSlide(8, 2)}></span>
+        <span className="dot" onClick={() => currentSlide(9, 2)}></span>
       </div>
       </>)
 }
