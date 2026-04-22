@@ -1,7 +1,7 @@
 import "./App.css"
 import {Table} from "./Table.jsx"
 import {List} from "./List.jsx"
-import { SlideshowContainer1 } from "./SlideshowContainer.jsx"
+import { SlideshowContainer1, SlideshowContainer2, SlideshowContainer3 } from "./SlideshowContainer.jsx"
 export function Body() {
     return (
     <main>
@@ -32,6 +32,7 @@ export function Body() {
     <p>I am proficent in the following languages.</p>
     <List />
     </div>
+
     <div id="projects">
       <h1>Projects</h1>
       <div class="subdiv" id="9thGrade">
@@ -47,15 +48,7 @@ export function Body() {
           programming, so I had to add every bird myself.</p>
         <p>There are 4 different colors, Yellow, Blue, Pink, and Green to differeniate between the four players.</p>
         <SlideshowContainer1 />
-        <br/>
-        <div class="dots">
-          <span class="dot" onclick="currentSlide(1, 0)"></span>
-          <span class="dot" onclick="currentSlide(2, 0)"></span>
-          <span class="dot" onclick="currentSlide(3, 0)"></span>
-          <span class="dot" onclick="currentSlide(4, 0)"></span>
-          <span class="dot" onclick="currentSlide(5, 0)"></span>
-          <span class="dot" onclick="currentSlide(6, 0)"></span>
-        </div>
+        
     
       </div>
     
@@ -77,63 +70,7 @@ export function Body() {
         <p>The client sends a post request to the server which adds to the database, and the server sends back a response
           that the client obtains.</p>
           <p>I also made a project about Japan and its culture. This was really more of a CSS challenge than anything else.</p>
-        <div class="slideshow-container">
-    
-          <div class="mySlides2 fade">
-            <div class="numbertext">1 / 6</div>
-            <img src="Opendata.png" />
-            <div class="text">Homepage of Opendata</div>
-          </div>
-    
-          <div class="mySlides2 fade">
-            <div class="numbertext">2 / 6</div>
-            <img src="OpendataResponsive.png" />
-            <div class="text">Opendata's responsive layout on small devices.</div>
-          </div>
-    
-    
-          <div class="mySlides2 fade">
-            <div class="numbertext">3 / 7</div>
-            <img src="OpendataInfo.png" />
-            <div class="text">Detailed CSS in cards</div>
-          </div>
-    
-          <div class="mySlides2 fade">
-            <div class="numbertext">4 / 7</div>
-            <img src="OpendataPie.png" />
-            <div class="text">Pie Charts of Opendata</div>
-          </div>
-          <div class="mySlides2 fade">
-            <div class="numbertext">5 / 7</div>
-            <img src="Japan.png" />
-            <div class="text">Country Project - Japan</div>
-          </div>
-          <div class="mySlides2 fade">
-            <div class="numbertext">6 / 7</div>
-            <img src="JapanStats.png" />
-            <div class="text">Japan Stats</div>
-          </div>
-  
-        <div class="mySlides2 fade">
-          <div class="numbertext">7 / 7</div>
-          <img src="JapanVisit.png" />
-          <div class="text">Visit Japan</div>
-        </div>
-    
-        <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
-         </div>
-      <br/>
-    
-      <div class="dots">
-        <span class="dot" onclick="currentSlide(1, 1)"></span>
-        <span class="dot" onclick="currentSlide(2, 1)"></span>
-        <span class="dot" onclick="currentSlide(3, 1)"></span>
-        <span class="dot" onclick="currentSlide(4, 1)"></span>
-        <span class="dot" onclick="currentSlide(5, 1)"></span>
-        <span class="dot" onclick="currentSlide(6, 1)"></span>
-        <span class="dot" onclick="currentSlide(7, 1)"></span>
-      </div>
+        <SlideshowContainer2 />
       </div>
       
     
@@ -161,72 +98,7 @@ export function Body() {
       <p>Currently, the project is now seperated into a client section and a server section, but I do not wish to refactor
         everything espeically at this completion.</p>
       <p>It supports sending, auto-recieving messages, editing with a notifer, and the deleting of messages.</p>
-            <div class="slideshow-container">
-            
-              <div class="mySlides3 fade">
-                <div class="numbertext">1 / 9</div>
-                <img src="DJMLSpawn.png" />
-                <div class="text">Don't Jump In Lava - Spawn</div>
-              </div>
-              <div class="mySlides3 fade">
-                <div class="numbertext">2 / 9</div>
-                <img src="DJMLEditor.png" />
-                <div class="text">Features 8 different types of blocks and a Level Editor</div>
-              </div>
-              <div class="mySlides3 fade">
-                <div class="numbertext">3 / 9</div>
-                <img src="DJMLWater.png" />
-                <div class="text">Don't Jump In Lava - Animated Water</div>
-              </div>
-              <div class="mySlides3 fade">
-                <div class="numbertext">4 / 9</div>
-                <img src="DJMLLukas.png" />
-                <div class="text">One of my own friends designed a level.</div>
-              </div>
-              <div class="mySlides3 fade">
-                <div class="numbertext">5 / 9</div>
-                <img src="DJMLLukas2.png" />
-                <div class="text">His Level Continued</div>
-              </div>
-              <div class="mySlides3 fade">
-                <div class="numbertext">6 / 9</div>
-                <img src="DJMLEnemy.png" />
-                <div class="text">Don't Jump In Lava - Enemies</div>
-              </div>
-              <div class="mySlides3 fade">
-                <div class="numbertext">7 / 9</div>
-                <img src="DJMLUnderGround.png" />
-                <div class="text">Don't Jump In Lava - Underground</div>
-              </div>
-              <div class="mySlides3 fade">
-                <div class="numbertext">8 / 9</div>
-                <img src="Nightcord.png" />
-                <div class="text">Nightcord - Messaging Service</div>
-              </div>
-              <div class="mySlides3 fade">
-                <div class="numbertext">9 / 9</div>
-                <img src="NightcordEdit.png" />
-                <div class="text">Nightcord - Supports Editing</div>
-              </div>
-            
-            
-            
-              <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
-              <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
-            </div>
-      <br/>
-    
-      <div class="dots">
-        <span class="dot" onclick="currentSlide(1, 2)"></span>
-        <span class="dot" onclick="currentSlide(2, 2)"></span>
-        <span class="dot" onclick="currentSlide(3, 2)"></span>
-        <span class="dot" onclick="currentSlide(4, 2)"></span>
-        <span class="dot" onclick="currentSlide(5, 2)"></span>
-        <span class="dot" onclick="currentSlide(6, 2)"></span>
-        <span class="dot" onclick="currentSlide(7, 2)"></span>
-        <span class="dot" onclick="currentSlide(8, 2)"></span>
-        <span class="dot" onclick="currentSlide(9, 2)"></span>
-      </div>
+        <SlideshowContainer3 />
 
     </div>
     </div>
